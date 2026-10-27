@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.empresajfx.viewController.ClienteViewController">
+    <children>
+        <Label layoutX="215.0" layoutY="20.0" text="Gestión de Clientes">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="40.0" layoutY="70.0" text="Cédula:" />
+        <TextField fx:id="txtCedula" layoutX="110.0" layoutY="66.0" prefWidth="440.0" />
+
+        <Label layoutX="40.0" layoutY="110.0" text="Nombre:" />
+        <TextField fx:id="txtNombre" layoutX="110.0" layoutY="106.0" prefWidth="440.0" />
+
+        <Label layoutX="40.0" layoutY="150.0" text="Apellido:" />
+        <TextField fx:id="txtApellido" layoutX="110.0" layoutY="146.0" prefWidth="440.0" />
+
+        <Button fx:id="btbAgregarCliente" layoutX="170.0" layoutY="190.0" onAction="#onAgregarCliente" text="Agregar cliente" />
+        <Button fx:id="btnActualizarCliente" layoutX="320.0" layoutY="190.0" onAction="#onActualizarCliente" text="Actualizar cliente" />
+
+        <TableView fx:id="tblListCliente" layoutX="40.0" layoutY="235.0" prefHeight="200.0" prefWidth="510.0">
+            <columns>
+                <TableColumn fx:id="tbcCedula" prefWidth="150.0" text="Cédula" />
+                <TableColumn fx:id="tbcNombre" prefWidth="180.0" text="Nombre" />
+                <TableColumn fx:id="tbcApellido" prefWidth="180.0" text="Apellido" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="btnLimpiar" layoutX="220.0" layoutY="450.0" onAction="#onLimpiar" text="Limpiar" />
+        <Button fx:id="btnEliminar" layoutX="320.0" layoutY="450.0" onAction="#onEliminar" text="Eliminar" />
+    </children>
+</AnchorPane>
